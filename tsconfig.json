@@ -1,0 +1,54 @@
+{
+  "include": [
+    "src",
+    "test"
+  ],
+  // https://www.typescriptlang.org/tsconfig#compilerOptions
+  "files": [
+    "typings/global.d.ts"
+  ],
+  "compilerOptions": {
+    /* Type Checking */
+    // "strict": true,
+    // "strictPropertyInitialization": false,
+    /* Modules */
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "resolveJsonModule": true,
+    // "typeRoots": [
+    //   "./node_modules/@types",
+    //   "./typings"
+    // ],
+    /* Emit */
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true,
+    /* JavaScript Support */
+    "allowJs": true,
+    /* Editor Support */
+    /* Interop Constraints */
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    /* Backwards Compatibility */
+    /* Languarge and Environmend */
+    "target": "ES2017",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    /* Compiler Dignostics */
+    /* Projects */
+    "incremental": true,
+    /* Output Formatting */
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}
