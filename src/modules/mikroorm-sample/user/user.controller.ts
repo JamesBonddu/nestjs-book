@@ -13,7 +13,7 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger'
 import type { CreateUserDto, LoginUserDto, UpdateUserDto } from '../article/dto'
 import type { IUserRO } from './user.interface'
 import type { UserService } from './user.service'
-import { User } from '@/decorator/user.decorator'
+import { User } from '@/decorators/user.decorator'
 import { ValidationPipe } from '@/pipe/validation.pipe'
 
 @ApiBearerAuth()

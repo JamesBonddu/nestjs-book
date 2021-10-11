@@ -4,7 +4,7 @@ import { Module, RequestMethod } from '@nestjs/common'
 import { UserController } from './user.controller'
 import { UserEntity } from './user.entity'
 import { UserService } from './user.service'
-import { AuthMiddleware } from '@/middleware/auth.middleware'
+import { AuthMiddleware } from '@/middlewares/auth.middleware'
 
 @Module({
   imports: [MikroOrmModule.forFeature({ entities: [UserEntity] })],

@@ -17,7 +17,7 @@ import {
 import type { IArticleRO, IArticlesRO, ICommentsRO } from './article.interface'
 import type { ArticleService } from './article.service'
 import type { CreateArticleDto, CreateCommentDto } from './dto'
-import { User } from '@/decorator'
+import { User } from '@/decorators'
 
 @ApiBearerAuth()
 @ApiTags('articles')

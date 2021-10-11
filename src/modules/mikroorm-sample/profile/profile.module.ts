@@ -5,7 +5,7 @@ import { UserEntity } from '../user/user.entity'
 import { UserModule } from '../user/user.module'
 import { ProfileController } from './profile.controller'
 import { ProfileService } from './profile.service'
-import { AuthMiddleware } from '@/middleware/auth.middleware'
+import { AuthMiddleware } from '@/middlewares/auth.middleware'
 
 @Module({
   imports: [MikroOrmModule.forFeature({ entities: [UserEntity] }), UserModule],

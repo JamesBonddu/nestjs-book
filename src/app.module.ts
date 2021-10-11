@@ -17,7 +17,7 @@ import { SchedulingTasksModule } from './modules/scheduling-sample/tasks.module'
 import { EventsModule } from './modules/socket-sample/events.module'
 import configuration from '@/config/configuration'
 import databaseConfig from '@/config/database.config'
-import { LoggerMiddleware } from '@/middleware/logger.middleware'
+import { LoggerMiddleware } from '@/middlewares/logger.middleware'
 
 /**
  * @see 通配符 path-to-regexp

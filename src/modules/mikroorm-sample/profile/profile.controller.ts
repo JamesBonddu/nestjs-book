@@ -3,7 +3,7 @@ import { ApiBearerAuth, ApiTags } from '@nestjs/swagger'
 import type { IProfileRO } from './profile.interface'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { ProfileService } from './profile.service'
-import { User } from '@/decorator/user.decorator'
+import { User } from '@/decorators/user.decorator'
 
 @ApiBearerAuth()
 @ApiTags('profiles')

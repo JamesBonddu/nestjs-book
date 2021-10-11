@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common'
-import type { ConfigService } from './modules/dynamic-modules/config.service'
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+import { ConfigService } from '@nestjs/config'
 import type { EnvConfig } from './modules/dynamic-modules/inerfaces/envconfig.interface'
 
 @Injectable()
@@ -7,7 +8,8 @@ export class AppService {
   private readonly config: EnvConfig
 
   constructor(configService: ConfigService) {
-    this.config = configService.getAll()
+    const port = configService.get('PORT', { infer: true })
+    console.log(port)
   }
 
   getHello(): string {

@@ -1,10 +1,10 @@
 import { createConnection } from 'net'
 import { Controller, Get, Inject, Injectable, Module } from '@nestjs/common'
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import Axios, { AxiosInstance } from 'axios'
+import type { ConfigService } from '@nestjs/config'
+import type { AxiosInstance } from 'axios'
+import Axios from 'axios'
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
 import { Connection } from 'typeorm'
-import type { ConfigService } from '@/modules/config-custom/config.service'
 
 const CONSTANTS = {
   CONNECTION1: 'CONNECTION1',

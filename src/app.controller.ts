@@ -11,12 +11,12 @@ import {
 import { Exclude, Expose, Transform } from 'class-transformer'
 import { assign } from 'lodash'
 import { Random } from 'mockjs'
-import { LoggingInterceptor } from './interceptor/logging.inerceptor'
+import type { AppService } from './app.service'
+import type { CreateCatDto } from './common/dto/create-cat.dto'
+import { LoggingInterceptor } from './interceptors/logging.inerceptor'
 import { JoiValidationPipe } from './pipe/joi-validation.pipe'
 import { ValidationPipe } from './pipe/validation.pipe'
 import { createCatSchema } from './schema/create-cat.schema'
-import type { AppService } from './app.service'
-import type { CreateCatDto } from './common/dto/create-cat.dto'
 
 class RoleEntity {
   id: number
@@ -81,6 +81,9 @@ export class AppController {
     return null
   }
 
+  /**
+   * 演示序列化
+   */
   @Get('serializer')
   @UseInterceptors(ClassSerializerInterceptor) // 也可作用与 controller class 上
   serializer(): UserEntity {

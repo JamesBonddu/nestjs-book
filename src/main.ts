@@ -3,7 +3,7 @@ import type { NestExpressApplication } from '@nestjs/platform-express'
 // import { NestFastifyApplication } from '@nestjs/platform-fastify'
 import { AppModule } from './app.module'
 import { AppService } from './app.service'
-import { LoggingInterceptor } from './interceptor/logging.inerceptor'
+import { LoggingInterceptor } from './interceptors/logging.inerceptor'
 import { ValidationPipe } from './pipe/validation.pipe'
 
 async function bootstrap() {
