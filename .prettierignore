@@ -26,3 +26,5 @@ node_modules
 pnpm-lock.yaml
 docker-compose.yml
 yarn.lock
+
+docs/*.js

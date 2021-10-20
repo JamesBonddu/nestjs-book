@@ -9,28 +9,74 @@
     "typings/global.d.ts"
   ],
   "compilerOptions": {
+    /**
+     * 注释掉的是默认值
+     */
     /* Type Checking */
-    // "strict": true,
-    // "strictPropertyInitialization": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    // "alwaysStrict": true, // 始终在生成的文件头中插入 'use strict'
+    // "exactOptionalPropertyTypes": false, // 如为 true 不能将 undefined 赋给可选属性（未定义 undefined 类型）
+    // "noFallthroughCasesInSwitch": false, // switch 覆盖到每一种可能的类型定义取值
+    // "noImplicitAny": true, // 如为 false，则允许 function fn(s) {}
+    // "noImplicitOverride": false, // 如为 true，则产生警告，即子类不能改写父类方法，除非在前面加上 override
+    // "noImplicitReturns": false, // 如为 true，则函数必须确保所有路径 return
+    // "noImplicitThis": true,
+    // "noPropertyAccessFromIndexSignature": false, // 允许使用.访问未明确的定义的属性，即 [key: string]: any 定义的
+    // "noUncheckedIndexedAccess": false,
+    // "noUnusedLocals": false, // 允许未使用的声明变量
+    // "noUnusedParameters": false, // 允许未使用的参数
+    "strict": true,
+    // "strictBindCallApply": true, // 如果 strict: true，则为 true
+    // "strictFunctionTypes": true, // 如果 strict: true，则为 true
+    // "strictNullChecks": true, // 如果 strict: true，则为 true
+    "strictPropertyInitialization": false,
+    // "useUnknownInCatchVariables": true, // 如果 strict: true，则为 true
     /* Modules */
+    // "allowUmdGlobalAccess": false, // 允许使用 UMD 模块引入全局变量
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "commonjs", // if target 是 ES3 或 ES5 则值为 commonjs，否则为 ES6/ES2015，还可以是 none amd system umd ES2020/es2020 ESNext/esnext node12 nodenext
+    "moduleResolution": "node", // 默认 classic，还可以是 AMD、 UMD、 System 或 ES6/ES2015、node12,
+    // "noResolve": false,
     "outDir": "./dist",
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "jquery": [
+        "node_modules/jquery/dist/jquery"
       ]
     },
-    "resolveJsonModule": true,
+    "resolveJsonModule": true, // 允许导入 json 后缀文件
     // "typeRoots": [
-    //   "./node_modules/@types",
+    //   "./node_modules/@types", // 默认本工程及上层目录的 node_modules/@types
     //   "./typings"
     // ],
+    // "types": ["node", "jest", "express"], // 只加载 @types 中指定的部分类型
     /* Emit */
-    "sourceMap": true,
-    "declaration": true,
+    // "declaration": true, 如果 composite 为 true 则也为 true
+    // "declarationDir": "", // 默认生成的 *.d.ts 与 js，如指定则将 *.d.ts 放在单独目录里，需与 "declaration" 或 "composite" 同时出现
+    // "declarationMap": false, // 是否生成 *.d.ts 文件的 map 文件
+    // "downlevelIteration": false, // 迭代降级，增加代码量且不会提高兼容性
+    // ?
+    // "emitBOM": false,
+    // "emitDeclarationOnly": false, // 如为 true 则只生成 d.ts 文件，不生成对应的 js 文件
+    // ☆☆☆☆☆
+    // "importHelpers": false,
+    // ?
+    // "importsNotUsedAsValues": "remove", // 删除 import type
+    // "inlineSourceMap": false, // 将 map 写入到生成的 js 文件底部，与 "sourceMap" 互斥
+    // "inlineSources": false,
+    // "mapRoot": "", // map 文件位置
+    // "newLine": "", // crlf 或 lf，根据平台决定
+    // ☆☆☆☆☆
+    // "noEmit": false,
+    // ☆☆☆☆☆
+    // "noEmitHelpers": false,
+    "noEmitOnError": false,
+    // "outFile": "",
+    "sourceMap": true, // crlf
     "removeComments": true,
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,

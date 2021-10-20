@@ -15,9 +15,10 @@ export class AuthMiddleware implements NestMiddleware {
     next: NextFunction
   ) {
     const { authorization } = req.headers
-    if (authorization && authorization.split(' ')[1]) {
-      const token = authorization.split(' ')[1]
+    const token = authorization && authorization.split(' ')[1]
+    if (token) {
       const decoded: any = jwt.verify(token, 'TOKEN_SECRET')
+      // 查找用户是否存在
       const user = await this.userService.findById(decoded.id)
 
       if (!user) {

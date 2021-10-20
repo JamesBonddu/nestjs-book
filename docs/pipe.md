@@ -1,5 +1,7 @@
 ## Pipe
 
+基本结构
+
 - [Joi](https://joi.dev/api/?v=17.4.2)
 
 ### 内置管道

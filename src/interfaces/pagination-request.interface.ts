@@ -14,12 +14,12 @@ export interface PaginationRequest {
   current?: number
 
   /**
-   * 当前页
+   * 其余参数
    */
   params?: any
 
   /**
-   * 当前页
+   * 排序
    */
   order?: Record<string, 'ASC' | 'DESC'>
 }

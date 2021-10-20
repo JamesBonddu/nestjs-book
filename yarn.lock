@@ -1359,10 +1359,10 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.18.tgz?cache=0&sync_timestamp=1632251141577&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.17.18.tgz#0198489a751005f71217744aa966cd1f29447c81"
   integrity sha1-AZhImnUQBfcSF3RKqWbNHylEfIE=
 
-"@types/node@^16.10.3":
-  version "16.10.3"
-  resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.10.3.tgz?cache=0&sync_timestamp=1633466142281&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.10.3.tgz#7a8f2838603ea314d1d22bb3171d899e15c57bd5"
-  integrity sha1-eo8oOGA+oxTR0iuzFx2JnhXFe9U=
+"@types/node@^16.10.9":
+  version "16.10.9"
+  resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.10.9.tgz?cache=0&sync_timestamp=1634160975668&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.10.9.tgz#8f1cdd517972f76a3b928298f4c0747cd6fef25a"
+  integrity sha1-jxzdUXly92o7koKY9MB0fNb+8lo=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
